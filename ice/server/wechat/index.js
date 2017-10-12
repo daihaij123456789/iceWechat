@@ -28,4 +28,3 @@ export const getWechat = () => {
 
   return oauth
 }*/
-getWechat()

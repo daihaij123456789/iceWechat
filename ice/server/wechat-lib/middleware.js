@@ -39,7 +39,7 @@ export default function (opts, reply) {
 
       console.log(message)
       ctx.weixin = message
-
+      console.log(reply)
       await reply.apply(ctx, [ctx, next])
 
       const replyBody = ctx.body
