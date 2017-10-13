@@ -36,10 +36,7 @@ export default function (opts, reply) {
 
       const content = await util.parseXML(data)
       const message = util.formatMessage(content.xml)
-
-      console.log(message)
       ctx.weixin = message
-      console.log(reply)
       await reply.apply(ctx, [ctx, next])
 
       const replyBody = ctx.body

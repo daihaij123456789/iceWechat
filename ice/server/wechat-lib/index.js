@@ -154,7 +154,6 @@ export default class Wechat {
     const tokenData = await this.fetchAccessToken()
     const options = this[operation](tokenData.access_token, ...args)
     const data = await this.request(options)
-
     return data
   }
 
