@@ -10,7 +10,7 @@ export default {
       'type': 'click',
       'key': 'contact'
     }, {
-      'name': '手办',
+      'name': '手办中国',
       'type': 'click',
       'key': 'gift'
     }, {

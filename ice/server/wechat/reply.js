@@ -9,9 +9,9 @@ export default async (ctx, next) => {
 
   const tokenData = await client.fetchAccessToken()
 
-  console.log(tokenData)
+  //console.log(tokenData)
 
-  console.log(await client.handle('getUserInfo', message.FromUserName, tokenData.access_token))
+  //console.log(await client.handle('getUserInfo', message.FromUserName, tokenData.access_token))
 
   if (message.MsgType === 'event') {
     if (message.Event === 'subscribe') {
@@ -29,74 +29,35 @@ export default async (ctx, next) => {
     if (message.Content === '1') {
       let userList = [
         {
-          openid: 'oW4nAvierE42NXIkwU9waetHF8Dg',
+          openid: 'oe0IEv99LfZP6V-uLOmEfVPnxVbU',
           lang: 'zh_CN'
         },
         {
-          openid: 'oW4nAvrWhLV05OMSKJBAPOdHoQlE',
+          openid: 'oe0IEv4Ez4ICPkXBasCsQvm_OpSo',
           lang: 'zh_CN'
         },
         {
-          openid: 'oW4nAvj_FzA2ZV0yUbcCI5bfDf_s',
+          openid: 'oe0IEv5PKjp68WXf4xvINjBGbnks',
           lang: 'zh_CN'
         },
         {
-          openid: 'oW4nAvoVIJMZh1eWZljDGXRoRwH0',
+          openid: 'oe0IEv89v1gEkLfpf9tzZCWv7uNU',
           lang: 'zh_CN'
         },
         {
-          openid: 'oW4nAvql1RPf88TLhdsCAPNYyNQA',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvuIc1zjxy0rSpx9u5bB2-s8',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvinU3XfeQZonHCCrYPUqNu0',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvidymbIkpeR2FwLWy7JKCRU',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvhn9ICAcWtz58_8-lDqcDZM',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvmqvtHWMBmJWGE7gWMMHvKU',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvhO3XMk1uxGPU3ZihlArQew',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvgYiCCZzSa4mnmPr21vBz-0',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvrlwQ0rbX6U9pLksZjLtd3k',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvrOQGvD7Au_BmScor0U82pA',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvpSgoLKfVDdtK_VvGutDako',
-          lang: 'zh_CN'
-        },
-        {
-          openid: 'oW4nAvr6tFuyv8pp22NNpp64ypFY',
+          openid: 'oe0IEv6srsMjcEDJCeKHhqlSXPSw',
           lang: 'zh_CN'
         }
       ]
-      // const data = await client.handle('createTag', 'VueSSR')
-      // const data = await client.handle('fetchTags')
+      //const data = await client.handle('createTag', 'VueSSR')
+      const data = await client.handle('fetchTags')
       // const data = await client.handle('batchTag', ['oW4nAvpSgoLKfVDdtK_VvGutDako'], 100)
-      const data = await client.handle('getTagList', 'oW4nAvpSgoLKfVDdtK_VvGutDako')
+      //const data = await client.handle('getTagList', 'oW4nAvpSgoLKfVDdtK_VvGutDako')
+      
+      //user
+      //const data = await client.handle('fetchUserList')
+      //const data = await client.handle('batchUserInfo',userList)
+      //const data = await client.handle('getUserInfo','oe0IEv89v1gEkLfpf9tzZCWv7uNU')
       console.log(data)
     } else if (message.Content === '2') {
       const menu = require('./menu').default
