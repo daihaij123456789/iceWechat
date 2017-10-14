@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\jianghaiyong\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add bcryptjs
+  C:\Program Files\nodejs\node.exe C:\Users\jianghaiyong\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add vue-awesome-swiper
 
 PATH: 
   C:\Users\jianghaiyong\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\local\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\usr\bin;C:\Program Files (x86)\Git\mingw32\bin;C:\Program Files (x86)\Git\usr\bin;C:\Users\jianghaiyong\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;D:\安装目录\QTSystem;C:\Program Files (x86)\Git\cmd;D:\phpStudy\Apache\bin;C:\Program Files\Java\jdk1.8.0_05\bin;C:\Program Files\MongoDB\Server\3.2\bin;D:\MongoDB;F:\Program Files\Sublime Text 3;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Python27;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit;F:\软件\android-studio-ide-162.3616766-windows\android-studio\bin;C:\Users\jianghaiyong\AppData\Local\Android\Sdk\tools;C:\Users\jianghaiyong\AppData\Local\Android\Sdk\platform-tools;C:\Users\jianghaiyong\AppData\Roaming\npm\node_modules\cnpm\bin;C:\Program Files (x86)\Microsoft VS Code;G:\BaiduYunDownload\Sublime Text 3.3114-x64 中文注册版\Sublime Text 3;C:\Program Files\nodejs;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\jianghaiyong\AppData\Roaming\npm;C:\Program Files (x86)\Git\usr\bin\vendor_perl;C:\Program Files (x86)\Git\usr\bin\core_perl
@@ -28,14 +28,31 @@ npm manifest:
       "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
     },
     "dependencies": {
+      "axios": "^0.16.2",
       "babel-preset-latest-node": "0.2.2",
+      "bcryptjs": "^2.4.3",
       "cross-env": "^5.0.1",
+      "css-loader": "^0.28.7",
+      "ejs": "^2.5.7",
+      "formstream": "^1.1.0",
       "koa": "^2.3.0",
       "koa-router": "^7.2.1",
+      "lodash": "^4.17.4",
       "mongoose": "^4.12.1",
+      "node-sass": "^4.5.3",
       "nuxt": "^1.0.0-rc3",
+      "pug": "^2.0.0-rc.4",
+      "randomatic": "^1.1.7",
+      "raw-body": "^2.3.2",
+      "repeat-string": "^1.6.1",
+      "request-promise": "^4.2.2",
+      "sass-loader": "^6.0.6",
       "sha1": "^1.1.1",
-      "source-map-support": "^0.4.15"
+      "source-map-support": "^0.4.15",
+      "vue-awesome-swiper": "^2.6.7",
+      "vue-style-loader": "^3.0.3",
+      "wechat-pay": "^0.2.5",
+      "xml2js": "^0.4.19"
     },
     "devDependencies": {
       "babel-eslint": "^7.1.1",
@@ -6317,4 +6334,4 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: EEXIST: file already exists, mkdir 'F:\work\ice-wechat\iceWechat\ice\node_modules\path-to-regexp'
+  Error: EPERM: operation not permitted, unlink 'F:\work\ice-wechat\iceWechat\ice\node_modules\.4.5.3@node-sass\vendor\win32-x64-57\binding.node'
