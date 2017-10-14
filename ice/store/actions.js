@@ -65,8 +65,7 @@ export default {
   async fetchHouses ({ state }) {
     const res = await Services.fetchHouses()
 
-    state.houses = res.data.data
-
+    state.houses = res.data[0].data
     return res
   },
 
@@ -78,13 +77,18 @@ export default {
     return res
   },
 
+  async fetchCities ({ state }) {
+    const res = await Services.fetchCities()
+
+    state.cities = res.data.data
+    return res
+  },
+
   async showHouse ({ state }, _id) {
     if (_id === state.currentHouse._id) return
 
     const res = await Services.fetchHouse(_id)
-
     state.currentHouse = res.data.data
-
     return res
   },
 
@@ -92,8 +96,6 @@ export default {
     if (_id === state.currentCharacter._id) return
 
     const res = await Services.fetchCharacter(_id)
-
-    console.log(res.data)
     state.currentCharacter = res.data.data
 
     return res
@@ -111,7 +113,6 @@ export default {
     if (_id === state.currentProduct._id) return
 
     const res = await Services.fetchProduct(_id)
-    console.log(res.data)
     state.currentProduct = res.data.data
 
     return res

@@ -1,6 +1,6 @@
 {
   "db": "mongodb://localhost/ice",
-  "SITE_ROOT_URL": "http://vuessrdahai.ngrok.cc/",
+  "SITE_ROOT_URL": "http://vuessrdahai.free.ngrok.cc",
   "wechat": {
     "appID": "wx9226474d248fd396",
     "appSecret": "e022d368d3010321e9af508dac8c66da",

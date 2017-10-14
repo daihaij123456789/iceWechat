@@ -23,13 +23,13 @@ export async function signature (ctx, next) {
   }
 }
 
-/*export async function redirect (ctx, next) {
+export async function redirect (ctx, next) {
   const target = config.SITE_ROOT_URL + '/oauth'
   const scope = 'snsapi_userinfo'
   const { visit, id } = ctx.query
   const params = id ? `${visit}_${id}` : visit
   const url = api.wechat.getAuthorizeURL(scope, target, params)
-
+  console.log(url)
   ctx.redirect(url)
 }
 
@@ -50,7 +50,7 @@ export async function oauth (ctx, next) {
   }
 }
 
-export async function paymentAsync (ctx, next) {
+/*export async function paymentAsync (ctx, next) {
   const { body } = ctx.request
 
   try {

@@ -6,15 +6,16 @@ import mutations from './mutations'
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      /*imageCDN: 'http://osmai097y.bkt.clouddn.com/',
+      imageCDN: 'http://osmai097y.bkt.clouddn.com/',
       currentCharacter: {},
       currentHouse: {},
       houses: [],
       products: [],
+      cities:[],
       currentProduct: [],
       user: null,
       authUser: null,
-      characters: []*/
+      characters: []
     },
     getters,
     actions,

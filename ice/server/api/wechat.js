@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
-//import { getWechat, getOAuth } from '../wechat'
-import { getWechat} from '../wechat'
+import { getWechat, getOAuth } from '../wechat'
 
 const User = mongoose.model('User')
 
@@ -20,8 +19,6 @@ export async function getSignatureAsync (url) {
 
 export function getAuthorizeURL (...args) {
   const oauth = getOAuth()
-
-  console.log(oauth)
   return oauth.getAuthorizeURL(...args)
 }
 
