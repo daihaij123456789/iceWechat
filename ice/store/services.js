@@ -29,33 +29,31 @@ class Services {
   }
 
   fetchHouses () {
-    return axios.get(`${apiUrl}/wiki/houses`)
-  }
-  fetchCities () {
-    return axios.get(`${apiUrl}/wiki/cities`)
+    return axios.get(`${baseUrl}/wiki/houses`)
   }
   fetchHouse (id) {
-    return axios.get(`${apiUrl}/wiki/houses/${id}`)
+    return axios.get(`${baseUrl}/wiki/houses/${id}`)
   }
 
   fetchCharacters () {
-    return axios.get(`${apiUrl}/wiki/characters`)
+    return axios.get(`${baseUrl}/wiki/characters`)
+    //return {data:{data:[]},success:true}
   }
 
   fetchCharacter (id) {
-    return axios.get(`${apiUrl}/wiki/characters/${id}`)
+    return axios.get(`${baseUrl}/wiki/characters/${id}`)
   }
 
   fetchProducts () {
-    return axios.get(`${apiUrl}/api/products`)
+    return axios.get(`${baseUrl}/api/products`)
   }
 
   fetchProduct (id) {
-    return axios.get(`${apiUrl}/api/products/${id}`)
+    return axios.get(`${baseUrl}/api/products/${id}`)
   }
 
   fetchUserAndOrders () {
-    return axios.get(`${apiUrl}/api/user`)
+    return axios.get(`${baseUrl}/api/user`)
   }
 }
 

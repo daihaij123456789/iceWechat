@@ -11,7 +11,6 @@ const createStore = () => {
       currentHouse: {},
       houses: [],
       products: [],
-      cities:[],
       currentProduct: [],
       user: null,
       authUser: null,

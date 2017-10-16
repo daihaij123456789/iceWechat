@@ -1,6 +1,7 @@
 <template lang="pug">
 .container
   .house-media
+    img(:src='imageCDN + house.cname + ".png"')
     .desc
       .words {{house.words}}
       .name {{house.name}}
@@ -10,9 +11,10 @@
     .body {{house.intro}}
     .title 主要角色
     .body(v-for='(item, index) in house.swornMembers' :key='index')
-        img(:src='item.profile' @click='showCharacter(item)')
+      .members(v-if='item.character')
+        img(:src='imageCDN + item.character.profile + "?imageView2/1/w/280/h/440/format/jpg/q/75|imageslim"' @click='showCharacter(item)')
         .desc
-          .cname {{item.cname}}
+          .cname {{item.character.cname}}
           .intro {{item.text}}
 
     .house-history(v-for='(item, index) in house.sections' :key='index')
@@ -32,7 +34,8 @@ export default {
 
   computed: {
     ...mapState({
-      house: 'currentHouse'
+      house: 'currentHouse',
+      imageCDN: 'imageCDN'
     })
   },
 

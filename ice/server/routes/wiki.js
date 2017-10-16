@@ -6,7 +6,6 @@ export class WechatController {
   @get('/houses')
   async getHouses (ctx, next) {
     const data = await api.wiki.getHouses()
-
     ctx.body = {
       data: data,
       sucess: true

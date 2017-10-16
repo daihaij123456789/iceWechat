@@ -5,8 +5,8 @@ require('babel-core/register')({
   'presets': [
     'stage-3',
     'latest-node'
-  ]
-  /*'plugins': [
+  ],
+  'plugins': [
     'transform-decorators-legacy',
     [
       'module-alias', [
@@ -16,8 +16,12 @@ require('babel-core/register')({
         }
       ]
     ]
-  ]*/
+  ]
 })
 
 require('babel-polyfill')
 require('./server')
+//require('./server/crawler/imdb')
+//require('./server/crawler/api')
+//require('./server/crawler/check')
+//require('./server/crawler/wiki')

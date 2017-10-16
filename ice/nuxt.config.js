@@ -32,7 +32,7 @@ module.exports = {
 	      src: 'swiper/dist/css/swiper.css'
 	    }
   ],
-  plugins: plugins: [
+  plugins: [
     { src: '~/plugins/swiper.js', ssr: false }
   ],
   /*

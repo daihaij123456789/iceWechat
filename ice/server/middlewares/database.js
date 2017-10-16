@@ -36,17 +36,17 @@ export const database = app => {
   mongoose.connection.on('open', async () => {
     console.log('Connected to MongoDB ', config.db)
 
-    /*const WikiHouse = mongoose.model('WikiHouse')
-    const WikiCharacter = mongoose.model('WikiCharacter')
-    const User = mongoose.model('User')
+    //const WikiHouse = mongoose.model('WikiHouse')
+    //const WikiCharacter = mongoose.model('WikiCharacter')
+    //const User = mongoose.model('User')
 
-    const existWikiHouses = await WikiHouse.find({}).exec()
+    /*const existWikiHouses = await WikiHouse.find({}).exec()
     const existWikiCharacters = await WikiCharacter.find({}).exec()
 
     if (!existWikiHouses.length) WikiHouse.insertMany(wikiHouses)
-      if (!existWikiCharacters.length) WikiCharacter.insertMany(wikiCharacters)
+      if (!existWikiCharacters.length) WikiCharacter.insertMany(wikiCharacters)*/
 
-    let user = await User.findOne({
+    /*let user = await User.findOne({
       email: 'scott@imooc.com'
     }).exec()
 

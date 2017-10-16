@@ -1,4 +1,4 @@
-//import Route from '../decorator/router'
+/*//import Route from '../decorator/router'
 import Router from 'koa-router';
 import config from '../config/development.json'
 import reply from '../wechat/reply'
@@ -22,3 +22,15 @@ export const router = app => {
 
 
 
+*/
+import Route from '../decorator/router'
+import { resolve } from 'path'
+
+const r = path => resolve(__dirname, path)
+
+export const router = app => {
+  const apiPath = r('../routes')
+  const router = new Route(app, apiPath)
+
+  router.init()
+}
