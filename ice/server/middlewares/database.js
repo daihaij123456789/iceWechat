@@ -47,14 +47,14 @@ export const database = app => {
       if (!existWikiCharacters.length) WikiCharacter.insertMany(wikiCharacters)*/
 
     /*let user = await User.findOne({
-      email: 'scott@imooc.com'
+      email: 'dahai@qq.com'
     }).exec()
 
     if (!user) {
       console.log('写入管理员数据')
       user = new User({
-        email: 'scott@imooc.com',
-        password: 'scottImooc',
+        email: 'dahai@qq.com',
+        password: '1234',
         role: 'admin'
       })
 
