@@ -199,8 +199,8 @@ export default {
 
       uploader.on('progress', () => {
         console.log(uploader.percent)
-        // let dashoffset = this.upload.dasharray * (1 - uploader.percent)
-        // this.upload.dashoffset = dashoffset
+        let dashoffset = this.upload.dasharray * (1 - uploader.percent)
+        this.upload.dashoffset = dashoffset
       })
 
       let res = await uploader.upload()

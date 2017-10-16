@@ -143,7 +143,7 @@ export class ProductController {
   async qiniuToken (ctx, next) {
     let key = ctx.query.key
     let token = qiniu.uptoken(key)
-
+    
     ctx.body = {
       success: true,
       data: {
