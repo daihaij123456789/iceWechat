@@ -1,5 +1,5 @@
 const tip = '我的卡丽熙，欢迎来到河间地\n' +
-  '点击 <a href="http://coding.imooc.com">一起搞事情吧</a>'
+  '点击 <a href="http://vuessrdahai.free.ngrok.cc/">一起搞事情吧</a>'
 
 
 export default async (ctx, next) => {
@@ -9,9 +9,7 @@ export default async (ctx, next) => {
 
   const tokenData = await client.fetchAccessToken()
 
-  //console.log(tokenData)
-
-  //console.log(await client.handle('getUserInfo', message.FromUserName, tokenData.access_token))
+  //await client.handle('getUserInfo', message.FromUserName, tokenData.access_token)
 
   if (message.MsgType === 'event') {
     if (message.Event === 'subscribe') {
@@ -58,13 +56,11 @@ export default async (ctx, next) => {
       //const data = await client.handle('fetchUserList')
       //const data = await client.handle('batchUserInfo',userList)
       //const data = await client.handle('getUserInfo','oe0IEv89v1gEkLfpf9tzZCWv7uNU')
-      console.log(data)
+      ctx.body = data
     } else if (message.Content === '2') {
       const menu = require('./menu').default
       await client.handle('delMenu')
       const menuData = await client.handle('createMenu', menu)
-
-      console.log(menuData)
     }
 
 

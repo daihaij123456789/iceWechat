@@ -17,13 +17,11 @@ export default {
   async beforeMount () {
     const url = window.location.href
     const { data } = await this.$store.dispatch('getWechatOAuth', url)
-    console.log(data)
 
     if (data.success) {
       await this.$store.dispatch('setAuthUser', data.data)
       const paramsArr = getUrlParam('state').split('_')
       const visit = paramsArr.length === 1 ? `/${paramsArr[0]}` : `/${paramsArr[0]}?id=${paramsArr[1]}`
-
       this.$router.replace(visit)
     } else {
       throw new Error('用户信息获取失败')

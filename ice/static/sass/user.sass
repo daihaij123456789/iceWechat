@@ -16,7 +16,7 @@
     font-size: 2.5em
     text-align: right
 
-    .text
+    .user-header-text
       float: left
 
     img
@@ -34,9 +34,8 @@
       font-size: 1.8em
   
   .user-order
-    .user-order-items
+    .user-order-item
       width: 100%
-      height: 2.5rem
       margin-top: $spacing/2
       font-size: 0
 
@@ -53,11 +52,16 @@
         width: 50%
         margin-left: 5%
         border-bottom: 1px solid $grey-300
+        overflow: hidden
         color: $grey-700
 
         .title
           padding-top: 3px
-          font-size: 1.5em
+          font-size: 1.4em
+          margin-bottom: .3em
+          text-overflow: ellipsis
+          overflow: hidden
+          white-space: nowrap
 
         .content
           font-size: 1.25em

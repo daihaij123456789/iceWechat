@@ -2,8 +2,13 @@ import mongoose from 'mongoose'
 
 const User = mongoose.model('User')
 
-export async function findUserByUnionId (unionid) {
+/*export async function findUserByUnionId (unionid) {
   const user = await User.findOne({unionid: unionid}).exec()
+
+  return user
+}*/
+export async function findUserByUnionId (unionid) {
+  const user = await User.findOne({openid: [data.openid]}).exec()
 
   return user
 }

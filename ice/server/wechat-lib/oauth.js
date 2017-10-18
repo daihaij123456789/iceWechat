@@ -41,7 +41,7 @@ export default class WechatOAuth {
     const url = `${api.userInfo}access_token=${token}&openid=${openID}&lang=${lang}`
 
     const data = await this.request({url: url})
-
+    
     return data
   }
 }

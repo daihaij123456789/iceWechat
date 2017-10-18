@@ -11,7 +11,6 @@ export class WechatController {
   async wechatHear (ctx, next) {
     const middle = wechatMiddle(config.wechat, reply)
     const body = await middle(ctx, next)
-
     ctx.body = body
   }
 

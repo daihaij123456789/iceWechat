@@ -42,7 +42,6 @@ export async function oauth (ctx, next) {
   const params = queryParse(urlObj.query)
   const code = params.code
   const user = await api.wechat.getUserByCode(code)
-
   ctx.session.user = user
   ctx.body = {
     success: true,
@@ -50,7 +49,7 @@ export async function oauth (ctx, next) {
   }
 }
 
-/*export async function paymentAsync (ctx, next) {
+export async function paymentAsync (ctx, next) {
   const { body } = ctx.request
 
   try {
@@ -161,7 +160,7 @@ export async function createOrderAsync (ctx, next) {
   }
 }
 
-export async function wechatPay (code) {
+export async function wechatPay (ctx) {
   const ip = ctx.ip.replace('::ffff:', '')
   const session = ctx.session
   const {
@@ -203,7 +202,7 @@ export async function wechatPay (code) {
       address,
       phoneNumber
     })
-
+    console.log(payment)
     ctx.body = {
       success: true,
       data: payment.order
@@ -214,7 +213,7 @@ export async function wechatPay (code) {
       err: err
     }
   }
-}*/
+}
 
 
 

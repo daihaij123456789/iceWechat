@@ -10,7 +10,7 @@
     .title {{house.cname}}
     .body {{house.intro}}
     .title 主要角色
-    .body(v-for='(item, index) in house.swornMembers' :key='index')
+    .body(v-for='(item, index) in house.swornMembers' :key='item._id')
       .members(v-if='item.character')
         img(:src='imageCDN + item.character.profile + "?imageView2/1/w/280/h/440/format/jpg/q/75|imageslim"' @click='showCharacter(item)')
         .desc
@@ -50,7 +50,7 @@ export default {
       this.$router.push({
         path: '/character',
         query: {
-          id: item._id
+          id: item.character.nmId
         }
       })
     }

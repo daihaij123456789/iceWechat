@@ -38,8 +38,6 @@ export class ProductController {
   async postProducts (ctx, next) {
     let product = ctx.request.body
 
-    console.log(ctx.request)
-
     product = {
       title: xss(product.title),
       price: xss(product.price),

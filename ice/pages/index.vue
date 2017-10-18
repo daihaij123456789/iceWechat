@@ -30,7 +30,7 @@
 import { mapState } from 'vuex'
 
 export default {
-
+  middleware: 'wechat-auth',
   head () {
     return {
       title: '冰火脸谱'

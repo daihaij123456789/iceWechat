@@ -47,7 +47,7 @@ export class WechatController {
     if (!_id) return (ctx.body = {succes: false, err: '_id is required'})
 
     const data = await api.wiki.getCharacter(_id)
-
+    
     ctx.body = {
       data: data,
       sucess: true

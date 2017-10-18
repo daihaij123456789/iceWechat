@@ -22,7 +22,7 @@ let wikiHouses = require(resolve(__dirname, '../database/json/completeHouses.jso
 wikiCharacters = formatData(wikiCharacters)*/
 
 export const database = app => {
-  mongoose.set('debug', true)
+  mongoose.set('debug', false)
 
   mongoose.connect(config.db)
 
@@ -34,7 +34,7 @@ export const database = app => {
   })
 
   mongoose.connection.on('open', async () => {
-    console.log('Connected to MongoDB ', config.db)
+    //console.log('Connected to MongoDB ', config.db)
 
     //const WikiHouse = mongoose.model('WikiHouse')
     //const WikiCharacter = mongoose.model('WikiCharacter')

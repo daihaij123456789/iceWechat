@@ -82,6 +82,7 @@ export default {
 
     const res = await Services.fetchHouse(_id)
     state.currentHouse = res.data.data
+
     return res
   },
 
@@ -137,7 +138,6 @@ export default {
   async fetchPayments ({ state }) {
     let { data } = await Services.getPayments()
     state.payments = data.data
-
     return data
   },
 
